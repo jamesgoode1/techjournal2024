@@ -1,0 +1,15 @@
+Key Learnings / The Exploration of Active Directory and DNS/ Tech Terms
+
+Active Directory Domain Services (ADDS): Centralized domain management system in Windows, stores user and device information.
+
+DNS Server Role: Translates domain names to IP addresses, often integrated with ADDS for network efficiency.
+
+ADDS and DNS Setup: Involves installing ADDS role, promoting to domain controller, and configuring DNS settings including forward and reverse lookup zones.
+
+Network Configuration: Essential to set correct IP, subnet, and DNS settings for domain communication.
+
+User and Group Management: Differentiate between domain and local accounts, manage permissions centrally in ADDS.
+
+Client Domain Integration: Adjust client DNS settings to join to the domain, allowing centralized resource access.
+
+Verification Tools: Use 'nslookup' for DNS functionality checks and domain name resolutions.
