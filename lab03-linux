@@ -6,3 +6,19 @@ chmod and chown:
   Used for changing the permissions of files or directories
 tail and head:
   these can be used to list the last part or first part of files .
+
+setting static IP on CentOS Linux:
+Use the command nmtui to enter gui. Edit the connection. Change IPv4 from automatic to manual. Configure the connection as follows: 
+
+IP Address and Netmask 
+10.0.5.3/24
+Gateway
+10.0.5.2
+DNS
+10.0.5.5
+Search Domain
+yourname.local
+Hostname
+dhcp01-yourname
+
+
