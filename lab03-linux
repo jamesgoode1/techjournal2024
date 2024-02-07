@@ -1,0 +1,8 @@
+Some new/useful linux commands:
+
+Grep:
+  Searches files or output for patterns of characters. grep is useful searching through large logs or files for specific text strings.
+chmod and chown:
+  Used for changing the permissions of files or directories
+tail and head:
+  these can be used to list the last part or first part of files .
