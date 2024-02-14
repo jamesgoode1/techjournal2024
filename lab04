@@ -1,0 +1,32 @@
+Steps of DHCP:
+
+Discovery:
+Client broadcasts DHCPDISCOVER to find DHCP servers.
+Uses broadcast address; client has no IP yet.
+
+Offer:
+DHCP servers respond with DHCPOFFER, offering IP configurations.
+Each offer includes IP address, subnet mask, lease duration, etc.
+
+Request:
+Client selects an offer and broadcasts DHCPREQUEST to accept it.
+Informs chosen server of acceptance and others to retract their offers.
+
+Acknowledgment:
+Chosen DHCP server sends DHCPACK, confirming IP lease to the client.
+Includes lease duration and necessary network configuration details.
+
+Some Common DHCP Options
+Option 1 (Subnet Mask): Specifies the subnet mask.
+Option 3 (Router): Provides the default gateway address.
+Option 6 (DNS Servers): Lists Domain Name System (DNS) server addresses.
+Option 12 (Host Name): Indicates the client's host name.
+Option 15 (Domain Name): Specifies the domain name for the client.
+Option 50 (Requested IP Address): Allows the client to request a specific IP address.
+Option 51 (IP Address Lease Time): Indicates the duration of the IP address lease.
+Option 53 (DHCP Message Type): Specifies the type of DHCP message (e.g., DISCOVER, OFFER, REQUEST, ACK).
+Option 54 (Server Identifier): Identifies the DHCP server in DHCPOFFER and DHCPACK messages.
+Option 55 (Parameter Request List): Specifies the list of options that the client requests from the DHCP server.
+Option 58 (Renewal (T1) Time Value) and Option 59 (Rebinding (T2) Time Value): Specify the time intervals for renewal and rebinding.
+Option 61 (Client Identifier): Used to identify the client uniquely.
+Option 67 (Bootfile Name): Used in PXE (Preboot Execution Environment) boot scenarios to specify the name of the boot file.
