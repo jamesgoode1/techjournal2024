@@ -1,0 +1,37 @@
+Managing Users, Groups, and Permissions in Linux
+
+Creating Users:
+useradd -m Bob
+
+Creating Groups:
+groupadd Marketing
+groupadd Management
+
+Adding users to groups: 
+usermod -a -G Marketing Bob
+
+Creating Department Directories:
+mkdir /marketing
+mkdir /management
+
+Setting Group Ownership and Permissions:
+chown :Marketing /marketing
+chmod 770 /marketing
+chown :Management /management
+chmod 770 /management
+
+Creating and Setting Permissions for Files:
+touch /marketing/newproducts.txt
+chown Fred:Marketing /marketing/newproducts.txt
+chmod 640 /marketing/newproducts.txt
+
+For managenent: 
+touch /management/bobreview.txt
+chown Alice:Management /management/bobreview.txt
+chmod 640 /management/bobreview.txt
+
+Verification:
+ls -ld /marketing
+ls -l /marketing/newproducts.txt
+ls -ld /management
+ls -l /management/bobreview.txt
