@@ -1,0 +1,14 @@
+Securing SSH to prevent remote root access on a CentOS system
+
+edit the SSH daemon configuration file /etc/ssh/sshd_config
+vi /etc/ssh/sshd_config
+PermitRootLogin no --> make sure to uncomment the line(#)
+
+write changes using :w and quit with :q
+
+systemctl restart sshd to restart
+
+
+
+
+
