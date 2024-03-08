@@ -1,0 +1,22 @@
+Open Group Policy Management
+Create a New Group Policy Object (GPO):
+Right-click on the OU where you want the policy applied. 
+Select "Create a GPO in this domain, and Link it here..."
+Name the GPO 
+
+Edit the GPO:
+Right-click on the newly created GPO and select "Edit" to open the Group Policy Management Editor.
+Navigate to User Configuration > Preferences > Windows Settings > Drive Maps.
+Right-click on Drive Maps and select "New" > "Mapped Drive" to open the New Drive Properties dialog.
+
+Configure Drive Mapping:
+In the New Drive Properties dialog, set the Action to "Update."
+Enter the location of the share in the Folder field: \\fs02-james\Sales.
+Assign a drive letter, in this case, S:.
+Optionally, label  the drive.
+Specify that this policy applies only to members of the Sales-Users group.
+Click "OK" to save.
+
+Link and Apply the GPO:
+Ensure the GPO is linked to the correct OU. 
+Force a group policy update on a wk02machine using the gpupdate /force.
