@@ -1,0 +1,10 @@
+Install realmd:
+
+sudo yum install -y realmd samba samba-common oddjob oddjob-mkhomedir sssd
+
+Join to the domain:
+
+realm join --user=your-domain-admin-username@yourdomain.local yourdomain.local
+
+Check 
+realm list
