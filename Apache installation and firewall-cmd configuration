@@ -1,0 +1,27 @@
+ Apache Installation
+ Install Apache: Used the `yum` package manager to install the `httpd` package:
+   ```bash
+   sudo yum install -y httpd
+   ```
+3. Start Apache Service: After the installation, I started the Apache service and ensured it was set to start on boot:
+   ```bash
+   sudo systemctl start httpd
+   sudo systemctl enable httpd
+   ```
+4. Verify Installation: Confirmed that Apache was running by accessing the server's IP address from a web browser, which displayed the default Apache CentOS test page.
+
+Firewall Configuration
+1.Open HTTP and HTTPS Ports: To allow web traffic, I added rules to the firewall for ports 80 (HTTP) and 443 (HTTPS):
+   ```bash
+   sudo firewall-cmd --permanent --add-service=http
+   sudo firewall-cmd --permanent --add-service=https
+   ```
+2. Reload Firewall: Applied the changes by reloading the firewall:
+   ```bash
+   sudo firewall-cmd --reload
+   ```
+3. Check Firewall Settings: Ensured the services were added successfully:
+   ```bash
+   sudo firewall-cmd --list-all
+   ```
+
