@@ -1,0 +1,13 @@
+Configuring DHCP on FS01:
+After connecting to FS01, I proceeded with the DHCP configuration, including setting up scopes, reservations, and options necessary for our network operations.
+
+- Step 1: Right-clicked on IPv4 under FS01 in the DHCP Management Console and selected New Scope to create a new DHCP scope.
+- Step 2: Followed the New Scope Wizard to define the IP address range, subnet mask, default gateway, and DNS servers.
+- Step 3: Authorized FS01 in Active Directory to serve DHCP requests by right-clicking FS01's name in the console and selecting Authorize.
+
+Verifying the Configuration:
+To ensure the DHCP service on FS01 was operational and serving client requests as expected, I performed the following:
+
+- Step 1: On a wks machine, I ran `ipconfig /release` followed by `ipconfig /renew` to renew its IP configuration.
+- Step 2: Checked the Address Leases under the newly created scope in the DHCP Management Console to see the lease provided, confirming that FS01 was successfully serving DHCP requests.
+
